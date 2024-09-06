@@ -1,26 +1,24 @@
-// src/App.js
-import React from 'react';
-import Header from './components/Header';
-import ProductList from './components/ProductList';
-import ProductCard from './components/ProductCard';
-import ShoppingCart from './components/ShoppingCart';
-import UserDashboard from './components/UserDashboard';
-import './App.css';
+import React, { useState } from 'react';
+import Header from './components/Header'; // Ensure this path is correct
+import ProductCard from './components/ProductCard'; // Ensure this path is correct
+import ProductList from './components/ProductList'; // Ensure this path is correct
+import ShoppingCart from './components/ShoppingCart'; // Ensure this path is correct
+import UserDashboard from './components/UserDashboard'; // Ensure this path is correct
 
 function App() {
-  // Example data
-  const products = [
-    { id: 1, name: 'Product 1', price: 10, image: 'product1.jpg' },
-    { id: 2, name: 'Product 2', price: 20, image: 'product2.jpg' }
-  ];
-  const cartItems = [{ id: 1, name: 'Product 1', price: 10 }];
+  const [products, setProducts] = useState([
+    // Your product data here
+  ]);
+
+  const [cartItems, setCartItems] = useState([]);
 
   return (
-    <div className="App">
+    <div>
       <Header />
       <main>
-        <ProductList products={products} />
+        {/* Components arranged in ascending order */}
         <ProductCard products={products} />
+        <ProductList products={products} />
         <ShoppingCart cartItems={cartItems} />
         <UserDashboard />
       </main>
