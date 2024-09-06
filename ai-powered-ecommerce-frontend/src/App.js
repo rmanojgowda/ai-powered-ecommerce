@@ -2,6 +2,7 @@
 import React from 'react';
 import Header from './components/Header';
 import ProductList from './components/ProductList';
+import ProductCard from './components/ProductCard';
 import ShoppingCart from './components/ShoppingCart';
 import UserDashboard from './components/UserDashboard';
 import './App.css';
@@ -19,6 +20,7 @@ function App() {
       <Header />
       <main>
         <ProductList products={products} />
+        <ProductCard products={products}
         <ShoppingCart cartItems={cartItems} />
         <UserDashboard />
       </main>
