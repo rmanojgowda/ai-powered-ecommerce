@@ -20,7 +20,7 @@ function App() {
       <Header />
       <main>
         <ProductList products={products} />
-        <ProductCard products={products}
+        <ProductCard products={products} />
         <ShoppingCart cartItems={cartItems} />
         <UserDashboard />
       </main>
